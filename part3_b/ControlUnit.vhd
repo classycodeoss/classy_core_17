@@ -57,7 +57,7 @@ o_modePCZ <= '0'; -- unused at the moment because we don't fetch data from PM
 --'0' when (s_state = CUS_FETCH or s_state = CUS_RESET_0 or s_state = CUS_RESET_1)
 --			else '1';
 			
-o_loadPC <= '1' when (s_state = CUS_FETCH_1 or s_state = CUS_EXEC_IJMP or s_state = CUS_EXEC_RJMP or s_state = CUS_EXEC_SBRS_3)
+o_loadPC <= '1' when (s_state = CUS_FETCH_1 or s_state = CUS_FETCH_2 or s_state = CUS_EXEC_IJMP or s_state = CUS_EXEC_RJMP or s_state = CUS_EXEC_SBRS_3)
 			else '0' when (s_state = CUS_DECODE or s_state = CUS_EXEC_SBRS_1 or s_state = CUS_EXEC_SBRS_2)
 			else 'X';
 

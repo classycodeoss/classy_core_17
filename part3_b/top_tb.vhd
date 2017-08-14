@@ -25,7 +25,7 @@ signal i_clk : std_logic := '0';
 signal i_reset_ext : std_logic := '0';
 signal i_A : unsigned(15 downto 0) := (others => '0');
 signal i_Z : unsigned(15 downto 0) := "0000000000000001";
-signal i_ALU_Z : std_logic := '0';
+signal i_ALU_Z : std_logic := '0'; -- if set to '1', program enters infinite loop at address 2 instead of 3
 
 --Outputs
 signal o_PMDATA : unsigned(15 downto 0);
